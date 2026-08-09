@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SatyaAI – AI Scam & Deepfake Detector</title>
+    <meta name="description" content="SatyaAI uses AI to detect scam messages, suspicious URLs, and deepfake media instantly." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="brand">
+            <div class="brand-icon">🛡️</div>
+            <div>
+                <h2>Satya<span>AI</span></h2>
+                <small>AI Fraud Detection</small>
+            </div>
+        </div>
+        <div class="nav-status">
+            <div class="status-dot"></div>
+            System Online
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-badge">✦ POWERED BY ARTIFICIAL INTELLIGENCE</div>
+        <h1>
+            <span>Detect</span> <strong>Scams &amp;<br/>Deepfakes</strong><br/>
+            <span>Instantly</span>
+        </h1>
+        <p>
+            SatyaAI analyses <span>messages, URLs, and images</span> in real time
+            to protect you from fraud, phishing, and AI-generated misinformation.
+        </p>
+        <div class="hero-buttons">
+            <a href="#scanner" class="primary-btn">Start Scanning ↓</a>
+            <a href="#how" class="secondary-btn">How it works</a>
+        </div>
+    </section>
+
+    <!-- SCANNER CARDS -->
+    <section class="scanner-section" id="scanner">
+        <div class="section-heading">
+            <span>01</span>
+            <div>
+                <h2>Choose a Scanner</h2>
+                <p>Select the type of content you want to analyse.</p>
+            </div>
+        </div>
+
+        <div class="analysis-grid">
+
+            <!-- TEXT CARD -->
+            <div class="analysis-card featured">
+                <div class="card-top">
+                    <div class="icon-box purple">💬</div>
+                    <span class="card-number">#001</span>
+                </div>
+                <h3>Message Scanner</h3>
+                <p>Paste any SMS, WhatsApp, or email message to check for scam patterns, OTP traps, and phishing language.</p>
+                <textarea id="message" placeholder="Paste suspicious message here…"></textarea>
+                <button id="analyzeTextBtn" class="analyze-btn purple-btn" onclick="analyzeText()">
+                    Analyse Message <span>→</span>
+                </button>
+            </div>
+
+            <!-- URL CARD -->
+            <div class="analysis-card">
+                <div class="card-top">
+                    <div class="icon-box blue">🔗</div>
+                    <span class="card-number">#002</span>
+                </div>
+                <h3>URL Scanner</h3>
+                <p>Enter any link to detect phishing sites, fake banking portals, and malicious redirects before you click.</p>
+                <div class="url-input">
+                    <span>https://</span>
+                    <input id="url" type="text" placeholder="example.com/verify-account" />
+                </div>
+                <p class="example">Try: <span onclick="document.getElementById('url').value='login.bank-verify-secure.com'">login.bank-verify-secure.com</span></p>
+                <p class="url-security">🔒 URL is not visited — analysis is local</p>
+                <button id="analyzeUrlBtn" class="analyze-btn blue-btn" onclick="analyzeURL()">
+                    Analyse URL <span>→</span>
+                </button>
+            </div>
+
+            <!-- IMAGE / DEEPFAKE CARD -->
+            <div class="analysis-card">
+                <div class="card-top">
+                    <div class="icon-box cyan">🖼️</div>
+                    <span class="card-number">#003</span>
+                </div>
+                <h3>Deepfake Scanner</h3>
+                <p>Upload an image or video to check for AI-generated faces, manipulated media, and visual inconsistencies.</p>
+                <div class="input-area">
+                    <label for="image">
+                        <div class="upload-icon">⬆️</div>
+                        <span>Drop image / video here</span>
+                        <small>JPG, PNG, MP4 — max 10 MB</small>
+                    </label>
+                    <input id="image" type="file" accept="image/*,video/*" />
+                </div>
+                <button id="analyzeImageBtn" class="analyze-btn cyan-btn" onclick="analyzeImage()">
+                    Analyse Media <span>→</span>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RESULT SECTION -->
+    <section class="result-section" id="result">
+        <div class="section-heading">
+            <span>02</span>
+            <div>
+                <h2>Analysis Result</h2>
+                <p>Your scan result will appear here after analysis.</p>
+            </div>
+        </div>
+
+        <div class="result-card">
+            <div id="resultContent">
+                <div class="result-placeholder">
+                    <div class="scan-ring">🛡️</div>
+                    <p>No scan yet — use a scanner above to get started.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section" id="how">
+        <div class="section-heading">
+            <span>03</span>
+            <div>
+                <h2>How SatyaAI Works</h2>
+                <p>Three-step protection pipeline.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
