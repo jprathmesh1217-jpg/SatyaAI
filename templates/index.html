@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SatyaAI – AI Scam & Deepfake Detector</title>
-    <meta name="description" content="SatyaAI uses AI to detect scam messages, suspicious URLs, and deepfake media instantly." />
+    <meta name="description"
+        content="SatyaAI uses AI to detect scam messages, suspicious URLs, and deepfake media instantly." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
+
 <body>
 
     <!-- NAVBAR -->
@@ -31,7 +35,7 @@
     <section class="hero">
         <div class="hero-badge">✦ POWERED BY ARTIFICIAL INTELLIGENCE</div>
         <h1>
-            <span>Detect</span> <strong>Scams &amp;<br/>Deepfakes</strong><br/>
+            <span>Detect</span> <strong>Scams &amp;<br />Deepfakes</strong><br />
             <span>Instantly</span>
         </h1>
         <p>
@@ -63,7 +67,8 @@
                     <span class="card-number">#001</span>
                 </div>
                 <h3>Message Scanner</h3>
-                <p>Paste any SMS, WhatsApp, or email message to check for scam patterns, OTP traps, and phishing language.</p>
+                <p>Paste any SMS, WhatsApp, or email message to check for scam patterns, OTP traps, and phishing
+                    language.</p>
                 <textarea id="message" placeholder="Paste suspicious message here…"></textarea>
                 <button id="analyzeTextBtn" class="analyze-btn purple-btn" onclick="analyzeText()">
                     Analyse Message <span>→</span>
@@ -77,12 +82,15 @@
                     <span class="card-number">#002</span>
                 </div>
                 <h3>URL Scanner</h3>
-                <p>Enter any link to detect phishing sites, fake banking portals, and malicious redirects before you click.</p>
+                <p>Enter any link to detect phishing sites, fake banking portals, and malicious redirects before you
+                    click.</p>
                 <div class="url-input">
                     <span>https://</span>
                     <input id="url" type="text" placeholder="example.com/verify-account" />
                 </div>
-                <p class="example">Try: <span onclick="document.getElementById('url').value='login.bank-verify-secure.com'">login.bank-verify-secure.com</span></p>
+                <p class="example">Try: <span
+                        onclick="document.getElementById('url').value='login.bank-verify-secure.com'">login.bank-verify-secure.com</span>
+                </p>
                 <p class="url-security">🔒 URL is not visited — analysis is local</p>
                 <button id="analyzeUrlBtn" class="analyze-btn blue-btn" onclick="analyzeURL()">
                     Analyse URL <span>→</span>
@@ -96,7 +104,8 @@
                     <span class="card-number">#003</span>
                 </div>
                 <h3>Deepfake Scanner</h3>
-                <p>Upload an image or video to check for AI-generated faces, manipulated media, and visual inconsistencies.</p>
+                <p>Upload an image or video to check for AI-generated faces, manipulated media, and visual
+                    inconsistencies.</p>
                 <div class="input-area">
                     <label for="image">
                         <div class="upload-icon">⬆️</div>
@@ -146,4 +155,5 @@
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
+
 </html>
